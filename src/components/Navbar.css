@@ -1,0 +1,196 @@
+.navbar {
+  position: fixed;
+  top: -80px;
+  width: 100%;
+background-color: #fff;
+  transition: all 0.4s ease;
+  z-index: 1000;
+  padding: 15px 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+.navbar.show {
+  top: 0;
+}
+
+.navbar-logo img {
+  max-height: 35px;
+  width: 95%;
+}
+
+.navbar-links {
+  font-size: 18px;
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+.links {
+  text-decoration: none;
+  color: #000;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.navbar-menu {
+  display: none;
+  /* font-size: 28px; */
+  cursor: pointer;
+}
+.enquiry-btn{
+  padding: 6.5px 25px;
+  border: 1px solid #000;
+  background: transparent;
+  color: #000;
+  font-size: 16.5px;
+  font-weight: 500;
+  text-decoration: none;
+  cursor: pointer;
+
+  position: relative;
+  overflow: hidden;
+
+  transition: 0.4s ease;
+}
+
+/* sliding white background */
+.enquiry-btn::before{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  transition: 0.4s ease;
+  z-index: -1;
+}
+
+/* hover effect */
+.enquiry-btn:hover::before{
+  left: 0;
+}
+
+.enquiry-btn:hover{
+  color: #fff;
+}
+/* ---------------- DROPDOWN ---------------- */
+
+/* Remove bootstrap default arrow */
+/* Remove bootstrap default arrow */
+.dropdown-toggle::after {
+  display: none !important;
+}
+
+/* Keep text and arrow aligned */
+.dropdown-toggle {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* Custom arrow */
+.arrow {
+  display: inline-block;
+  font-size: 25px;
+  margin-top: -3px;
+  margin-left: -5px;
+  line-height: 2;
+  transition: transform 0.3s ease;
+}
+
+/* Rotation */
+.arrow.rotate {
+  transform: rotate(180deg);
+}
+.dropdown-menu {
+  position: absolute;
+  top: 35px;
+  left: 0;
+  background: white;
+  padding: 10px 0;
+  display: none;
+  flex-direction: column;
+  min-width: 150px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  border-radius: 4px;
+}
+
+.dropdown-menu a {
+  padding: 8px 15px;
+  text-decoration: none;
+  color: black;
+  display: block;
+  font-size: 14px;
+}
+
+.dropdown-menu a:hover {
+  background: #f5f5f5;
+}
+
+.dropdown-menu.show {
+  display: flex;
+}
+
+/* ---------------- SIDEBAR ---------------- */
+
+.sidebar {
+  position: fixed;
+  left: -260px;
+  top: 0;
+  width: 260px;
+  height: 100%;
+  background: white;
+  padding: 30px;
+  transition: 0.4s;
+  z-index: 1200;
+}
+
+.sidebar.open {
+  left: 0;
+}
+
+.sidebar-logo {
+  margin-bottom: 30px;
+}
+
+.sidebar .links {
+  display: block;
+  margin-bottom: 20px;
+}
+
+/* Sidebar dropdown */
+
+.sidebar-dropdown .links {
+  cursor: pointer;
+}
+
+.sidebar-submenu {
+  display: none;
+  padding-left: 15px;
+}
+
+.sidebar-submenu a {
+  display: block;
+  margin: 10px 0;
+  text-decoration: none;
+  color: black;
+  font-size: 14px;
+}
+
+.sidebar-submenu.show {
+  display: block;
+}
+
+/* ---------------- MOBILE ---------------- */
+
+@media (max-width: 992px) {
+
+  .navbar-links {
+    display: none;
+  }
+
+  .navbar-menu {
+    display: block;
+  }
+
+}

@@ -1,0 +1,170 @@
+.updates {
+  padding: 80px 20px;
+  background: #f8f8f8;
+}
+
+.updates-heading {
+  max-width: 750px;
+  margin: 0 auto 60px;
+  text-align: center;
+}
+
+.updates-tag {
+  display: inline-block;
+  font-size: 15px;
+  font-weight: 600;
+  color: #f97316;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 18px;
+}
+
+.updates-title {
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #111;
+  margin-bottom: 20px;
+}
+
+.updates-para {
+  font-size: 17px;
+  line-height: 1.9;
+  color: #555;
+}
+
+/* Cards Grid */
+.updates-container {
+  max-width: 1300px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.updates-card {
+  position: relative;
+  border-radius: 22px;
+  overflow: hidden;
+  height: 520px;
+  cursor: pointer;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+}
+
+.updates-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Overlay */
+.updates-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.9) 10%,
+    rgba(0, 0, 0, 0.1) 70%
+  );
+  display: flex;
+  align-items: flex-end;
+}
+
+.updates-content {
+  padding: 30px;
+  color: #fff;
+}
+
+.updates-content h3 {
+  font-size: 1.7rem;
+  margin-bottom: 12px;
+  line-height: 1.3;
+}
+
+.updates-content p {
+  font-size: 15px;
+  line-height: 1.8;
+  margin-bottom: 18px;
+}
+
+.updates-link {
+  color: #f97316;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 15px;
+  transition: 0.3s ease;
+}
+
+.updates-link:hover {
+  color: #fff;
+}
+
+/* Hover */
+.updates-card:hover .updates-image {
+  transform: scale(1.08);
+  transition: 0.5s ease;
+}
+
+/* Tablet */
+@media (max-width: 991px) {
+  .updates {
+    padding: 60px 20px;
+  }
+
+  .updates-title {
+    font-size: 2.4rem;
+  }
+
+  .updates-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .updates {
+    padding: 50px 15px;
+  }
+
+  .updates-title {
+    font-size: 2rem;
+  }
+
+  .updates-para {
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  .updates-container {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .updates-card {
+    height: 350px;
+  }
+
+  .updates-content {
+    padding: 20px;
+  }
+
+  .updates-content h3 {
+    font-size: 1.3rem;
+  }
+
+  .updates-content p {
+    font-size: 14px;
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+  .updates-title {
+    font-size: 1.6rem;
+  }
+
+  .updates-para {
+    font-size: 14px;
+  }
+}
