@@ -21,10 +21,10 @@ const Footer = () => {
                 <p className="footer-tagline">Go Electric. Drive the Future.</p>
 
                 <p className="footer-desc">
-                  At Eternity, we bring you the next generation of electric
+                  {/* At Eternity, we bring you the next generation of electric
                   vehicles with cutting-edge technology, superior performance,
                   and a commitment to sustainability. Experience innovation,
-                  reliability, and a smarter way to drive.
+                  reliability, and a smarter way to drive. */}
                 </p>
 
                 <div className="social-icons">
@@ -54,9 +54,9 @@ const Footer = () => {
 
                 <ul className="footer-links">
                   <li><a href="/home">Home</a></li>
-                  <li><a href="/Mpv">VF MPV 7</a></li>
-                  <li><a href="/Vf6">VF6</a></li>
-                  <li><a href="/Vf7">VF7</a></li>
+                  <li><a href="/about">About</a></li>
+                  <li><a href="/mission">Mission</a></li>
+                  <li><a href="updates">Updates</a></li>
                   <li><a href="/contact">Contact Us</a></li>
                 </ul>
               </div>
@@ -68,19 +68,19 @@ const Footer = () => {
                 <h5 className="footer-heading">Address</h5>
 
                 <p className="footer-address">
-                  Anaura Kala, NH 24, Ayodhya - Lucknow Rd, <br />
-                  Near Indira Canal, Faizabad,
+                  xxxxxxxxxxxxxxxxxxxxxxxxxxxx, <br />
+                  xxxxxxxxxxxxxxxxxxxxxxxxxxxxx,
                   <br />
-                  Lucknow, Uttar Pradesh 227105
+                xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
                   <br />
                   <br />
                   Phone:{" "}
                   <a href="tel:+918679309990" className="footer-contact-link">
-                    +91 8679309990
+                    +91 xxxxxxxxxxxx
                   </a>
                   ,{" "}
-                  <a href="tel:+918679509990" className="footer-contact-link">
-                    +91 8679509990
+                  <a href="tel:+xxxxxxxxxxx" className="footer-contact-link">
+                    +91 xxxxxxxxxxxxxxx
                   </a>
                   <br />
                   Email:{" "}
@@ -88,11 +88,11 @@ const Footer = () => {
                     href="mailto:eternity.lko@gmail.com"
                     className="footer-contact-link"
                   >
-                    eternity.lko@gmail.com
+                   xxxxxxx@gmail.com
                   </a>
                 </p>
 
-                <button className="brochure-btn">Download Brochure</button>
+                <button className="brochure-btn">xxxxxxxxx</button>
               </div>
             </Col>
           </Row>
