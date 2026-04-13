@@ -5,7 +5,8 @@ const Video = () => {
   return (
     <section className="video">
       <div className="video-container">
-        <video
+        video
+        {/* <video
           className="video-player"
           autoPlay
           muted
@@ -14,7 +15,7 @@ const Video = () => {
         >
           <source src="" />
           Your browser does not support the video tag.
-        </video>
+        </video> */}
       </div>
     </section>
   );
