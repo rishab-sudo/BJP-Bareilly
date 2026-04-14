@@ -49,13 +49,13 @@ const Navbar = () => {
             <span className="links" onClick={() => scrollToSection("about")}>About</span>
             <span className="links" onClick={() => scrollToSection("mission")}>Mission</span>
             <span className="links" onClick={() => scrollToSection("updates")}>Updates</span>
-
-            <button
+            <span className="links"  onClick={() => setShowPopup(true)}>Contact US</span>
+            {/* <button
               className="enquiry-btn"
               onClick={() => setShowPopup(true)}
             >
               Contact Us
-            </button>
+            </button> */}
 
             <FormPopup
               isOpen={showPopup}
