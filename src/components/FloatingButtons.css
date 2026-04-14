@@ -14,7 +14,7 @@
   height: 50px;
   border-radius: 50%;
   background: transparent;
-  border: 2px solid #25D366;
+  border: 2px solid #f97316;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -24,9 +24,9 @@
 }
 
 /* WhatsApp specific */
-.whatsapp {
+/* .whatsapp {
   color: #25D366;
-}
+} */
 
 /* Arrow specific */
 .top {
