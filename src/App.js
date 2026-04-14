@@ -5,6 +5,7 @@ import "bootstrap/dist/js/bootstrap.bundle";
 import { Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
+import FloatingButtons from "./components/FloatingButtons";
 import Footer from "./components/Footer";
 import "./App.css";
 
@@ -15,6 +16,7 @@ function App() {
 
         <div className="">
           <Navbar />
+               <FloatingButtons />
           <Routes>
             <Route path="/" element={<Home />} />
 

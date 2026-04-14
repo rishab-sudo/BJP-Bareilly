@@ -1,5 +1,6 @@
 import React from "react";
 import "./Service.css";
+import { Container } from "react-bootstrap";
 
 const galleryImages = [
   require("../assets/gallery/bjp-g1.jpg"),
@@ -10,8 +11,8 @@ const galleryImages = [
  require("../assets/gallery/bjp-g6.jpg"),
  require("../assets/gallery/bjp-g7.jpg"),
  require("../assets/gallery/bjp-g8.jpg"),
-  "https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?auto=format&fit=crop&w=1200&q=80",
-  "https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?auto=format&fit=crop&w=1200&q=80",
+   require("../assets/gallery/bjp-g9.jpg"),
+ require("../assets/gallery/bjp-g10.jpg"),
 
 ];
 
@@ -19,7 +20,7 @@ const Service = () => {
   return (
     <section className="service">
       <div className="service-fluid">
-        <div className="service-container">
+        <Container className="service-container">
           {/* Heading */}
           <div className="service-heading">
             <span className="service-tag">Our Services</span>
@@ -49,7 +50,7 @@ const Service = () => {
               </div>
             ))}
           </div>
-        </div>
+        </Container>
       </div>
     </section>
   );

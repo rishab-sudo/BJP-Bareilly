@@ -1,21 +1,11 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { Container } from "react-bootstrap";
 import FormPopup from "./FormPopup";
 import "./Navbar.css";
 
 const Navbar = () => {
   const [showPopup, setShowPopup] = useState(false);
-  const [showNav, setShowNav] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setShowNav(window.scrollY > 80);
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
@@ -25,9 +15,14 @@ const Navbar = () => {
     const section = document.getElementById(id);
 
     if (section) {
-      section.scrollIntoView({
+      const navbarHeight = 80;
+
+      const sectionTop =
+        section.getBoundingClientRect().top + window.pageYOffset - navbarHeight;
+
+      window.scrollTo({
+        top: sectionTop,
         behavior: "smooth",
-        block: "start",
       });
     }
 
@@ -36,33 +31,41 @@ const Navbar = () => {
 
   return (
     <>
-      {/* TOP NAVBAR */}
-      <div className={`navbar ${showNav ? "show" : ""}`}>
-        <Container fluid className="d-flex justify-content-between align-items-center">
-          
-          <div className="navbar-logo">
-            <img src="" alt="logo" />
+      {/* STICKY NAVBAR */}
+      <div className="navbar">
+        <Container
+          fluid
+          className="d-flex justify-content-between align-items-center"
+        >
+          {/* Logo */}
+          <div className="navbar-logo" onClick={() => scrollToSection("home")}>
+            <img src="/logo.png" alt="logo" />
           </div>
 
+          {/* Desktop Links */}
           <div className="navbar-links">
-            <span className="links" onClick={() => scrollToSection("home")}>Home</span>
-            <span className="links" onClick={() => scrollToSection("about")}>About</span>
-            <span className="links" onClick={() => scrollToSection("mission")}>Mission</span>
-            <span className="links" onClick={() => scrollToSection("updates")}>Updates</span>
-            <span className="links"  onClick={() => setShowPopup(true)}>Contact US</span>
-            {/* <button
-              className="enquiry-btn"
-              onClick={() => setShowPopup(true)}
-            >
-              Contact Us
-            </button> */}
+            <span className="links" onClick={() => scrollToSection("home")}>
+              Home
+            </span>
 
-            <FormPopup
-              isOpen={showPopup}
-              onClose={() => setShowPopup(false)}
-            />
+            <span className="links" onClick={() => scrollToSection("about")}>
+              About
+            </span>
+
+            <span className="links" onClick={() => scrollToSection("mission")}>
+              Mission
+            </span>
+
+            <span className="links" onClick={() => scrollToSection("updates")}>
+              Updates
+            </span>
+
+            <span className="links" onClick={() => setShowPopup(true)}>
+              Contact Us
+            </span>
           </div>
 
+          {/* Mobile Menu */}
           <div className="navbar-menu" onClick={toggleMenu}>
             {menuOpen ? "✕" : "☰"}
           </div>
@@ -75,12 +78,35 @@ const Navbar = () => {
           <img src="/logo.png" alt="logo" height="40" />
         </div>
 
-        <span className="links" onClick={() => scrollToSection("home")}>Home</span>
-        <span className="links" onClick={() => scrollToSection("about")}>About</span>
-        <span className="links" onClick={() => scrollToSection("mission")}>Mission</span>
-        <span className="links" onClick={() => scrollToSection("updates")}>Updates</span>
-        <span className="links" onClick={() => scrollToSection("contact")}>Contact</span>
+        <span className="links" onClick={() => scrollToSection("home")}>
+          Home
+        </span>
+
+        <span className="links" onClick={() => scrollToSection("about")}>
+          About
+        </span>
+
+        <span className="links" onClick={() => scrollToSection("mission")}>
+          Mission
+        </span>
+
+        <span className="links" onClick={() => scrollToSection("updates")}>
+          Updates
+        </span>
+
+        <span
+          className="links"
+          onClick={() => {
+            setShowPopup(true);
+            setMenuOpen(false);
+          }}
+        >
+          Contact Us
+        </span>
       </div>
+
+      {/* Popup */}
+      <FormPopup isOpen={showPopup} onClose={() => setShowPopup(false)} />
     </>
   );
 };
