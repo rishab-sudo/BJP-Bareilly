@@ -71,7 +71,7 @@ const Connect = () => {
           {/* Right Image */}
           <div className="connect-image-wrapper">
             <img
-              src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1200&q=80"
+              src= {require("../assets/office.jpg")}
               alt="Connect"
               className="connect-image"
             />

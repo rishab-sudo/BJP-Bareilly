@@ -9,10 +9,10 @@ const galleryImages = [
  require("../assets/gallery/bjp-g5.jpg"),
  require("../assets/gallery/bjp-g6.jpg"),
  require("../assets/gallery/bjp-g7.jpg"),
-  "https://images.unsplash.com/photo-1519641471654-76ce0107ad1b?auto=format&fit=crop&w=1200&q=80",
+ require("../assets/gallery/bjp-g8.jpg"),
   "https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?auto=format&fit=crop&w=1200&q=80",
   "https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?auto=format&fit=crop&w=1200&q=80",
-  
+
 ];
 
 const Service = () => {
