@@ -42,21 +42,34 @@
   gap: 30px;
 }
 
+.updates-video {
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 10px;
+}
+
+/* ensure card height */
 .updates-card {
+  position: relative;
+  overflow: hidden;
+  height: 500px;
+}
+/* .updates-card {
   position: relative;
   border-radius: 22px;
   overflow: hidden;
   height: 520px;
   cursor: pointer;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
-}
+} */
 
-.updates-image {
+/* .updates-image {
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
-}
+} */
 
 /* Overlay */
 .updates-overlay {

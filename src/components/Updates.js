@@ -3,40 +3,39 @@ import "./Updates.css";
 
 const updatesData = [
   {
-    image:
-      "https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=1200&q=80",
+    type: "video",
+    embed: "https://www.instagram.com/reel/DXUnyquE4l3/embed",
+    link: "https://www.instagram.com/reel/DXUnyquE4l3/",
     title: "New Electric SUV Launch Experience",
     text: "Discover innovation, style, and comfort in our latest premium launch.",
   },
   {
-    image:
-      "https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1200&q=80",
+    type: "video",
+    embed: "https://www.instagram.com/reel/DW6W5p9gZ3V/embed",
+    link: "https://www.instagram.com/reel/DW6W5p9gZ3V/",
     title: "Premium Showroom Experience",
-    text: "Visit our showroom and explore the future of mobility with us.",
+    text: "Visit our showroom and explore the future of mobility.",
   },
   {
-    image:
-      "https://images.unsplash.com/photo-1549924231-f129b911e442?auto=format&fit=crop&w=1200&q=80",
+    type: "video",
+    embed: "https://www.instagram.com/reel/DWg1KV8E2KW/embed",
+    link: "https://www.instagram.com/reel/DWg1KV8E2KW/",
     title: "Exclusive Offers This Season",
-    text: "Grab exciting deals and benefits on selected premium models.",
+    text: "Grab exciting deals on selected premium models.",
   },
   {
-    image:
-      "https://images.unsplash.com/photo-1511919884226-fd3cad34687c?auto=format&fit=crop&w=1200&q=80",
+    type: "video",
+    embed: "https://www.instagram.com/reel/DWqNyoNj1Ev/embed",
+    link: "https://www.instagram.com/reel/DWqNyoNj1Ev/",
     title: "Advanced Technology Insights",
-    text: "Experience the latest connected driving features and smart systems.",
+    text: "Experience the latest connected driving features.",
   },
   {
-    image:
-      "https://images.unsplash.com/photo-1489824904134-891ab64532f1?auto=format&fit=crop&w=1200&q=80",
-    title: "Road Test Drive Campaign",
-    text: "Book a test drive and feel unmatched performance on every road.",
-  },
-  {
-    image:
-      "https://images.unsplash.com/photo-1503736334956-4c8f8e92946d?auto=format&fit=crop&w=1200&q=80",
+    type: "video",
+    embed: "https://www.instagram.com/reel/DWY07ZcDUIH/embed",
+    link: "https://www.instagram.com/reel/DWY07ZcDUIH/",
     title: "Luxury Redefined for You",
-    text: "Where design meets performance to create unforgettable journeys.",
+    text: "Where design meets performance.",
   },
 ];
 
@@ -62,17 +61,41 @@ const Updates = () => {
       <div className="updates-container">
         {updatesData.map((item, index) => (
           <div className="updates-card" key={index}>
-            <img src={item.image} alt={item.title} className="updates-image" />
+            
+            {/* VIDEO OR IMAGE */}
+            {item.type === "video" ? (
+              <iframe
+                src={item.embed}
+                className="updates-video"
+                allow="encrypted-media"
+                allowFullScreen
+                title="Instagram Reel"
+              ></iframe>
+            ) : (
+              <img
+                src={item.image}
+                alt={item.title}
+                className="updates-image"
+              />
+            )}
 
+            {/* OVERLAY */}
             <div className="updates-overlay">
               <div className="updates-content">
                 <h3>{item.title}</h3>
                 <p>{item.text}</p>
-                <a href="/" className="updates-link">
+
+                <a
+                  href={item.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="updates-link"
+                >
                   View More →
                 </a>
               </div>
             </div>
+
           </div>
         ))}
       </div>
