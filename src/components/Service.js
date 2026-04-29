@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Service.css";
 import { Container } from "react-bootstrap";
 
@@ -17,10 +17,13 @@ const galleryImages = [
 ];
 
 const Service = () => {
+  const [selectedImg, setSelectedImg] = useState(null);
+
   return (
     <section className="service">
       <div className="service-fluid">
         <Container className="service-container">
+          
           {/* Heading */}
           <div className="service-heading">
             <span className="service-tag">Our Services</span>
@@ -33,8 +36,7 @@ const Service = () => {
 
             <p className="service-para">
               We provide world-class automotive services designed to deliver
-              comfort, trust, and excellence at every step. Explore our premium
-              support and service experience crafted for your journey.
+              comfort, trust, and excellence at every step.
             </p>
 
             <h3 className="service-subtitle">
@@ -42,16 +44,28 @@ const Service = () => {
             </h3>
           </div>
 
-          {/* Fancy Gallery */}
+          {/* Gallery */}
           <div className="service-gallery">
             {galleryImages.map((img, index) => (
-              <div className="service-card" key={index}>
+              <div
+                className="service-card"
+                key={index}
+                onClick={() => setSelectedImg(img)}
+              >
                 <img src={img} alt={`Service ${index + 1}`} />
               </div>
             ))}
           </div>
         </Container>
       </div>
+
+      {/* Popup Modal */}
+      {selectedImg && (
+        <div className="image-modal" onClick={() => setSelectedImg(null)}>
+          <span className="close-btn">&times;</span>
+          <img src={selectedImg} alt="Preview" className="modal-img" />
+        </div>
+      )}
     </section>
   );
 };
