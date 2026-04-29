@@ -37,6 +37,34 @@ const updatesData = [
     title: "Luxury Redefined for You",
     text: "Where design meets performance.",
   },
+    {
+    type: "video",
+    embed: "https://www.instagram.com/reel/DUyNC_oEzov/embed",
+    link: "https://www.instagram.com/reel/DUyNC_oEzov/",
+    title: "Dynamic Driving Experience",
+    text: "Feel the thrill of performance and precision engineering.",
+  },
+  {
+    type: "video",
+    embed: "https://www.instagram.com/reel/DUANdCLFMjF/embed",
+    link: "https://www.instagram.com/reel/DUANdCLFMjF/",
+    title: "Next-Gen Interior Comfort",
+    text: "Designed for luxury, comfort, and advanced usability.",
+  },
+  {
+    type: "video",
+    embed: "https://www.instagram.com/reel/DT5fHwPk_2R/embed",
+    link: "https://www.instagram.com/reel/DT5fHwPk_2R/",
+    title: "Performance Meets Efficiency",
+    text: "Powerful engines with unmatched fuel efficiency.",
+  },
+  {
+    type: "video",
+    embed: "https://www.instagram.com/reel/DT_AYEmE08X/embed",
+    link: "https://www.instagram.com/reel/DT_AYEmE08X/",
+    title: "Smart Mobility Features",
+    text: "Stay connected with cutting-edge smart technology.",
+  },
 ];
 
 const Updates = () => {
