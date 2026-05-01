@@ -5,7 +5,7 @@ import HomeAbout from "../components/HomeAbout";
 import Mission from "../components/Mission";
 import Connect from "../components/Connect";
 import Updates from "../components/Updates";
-// import Video from "../components/video";
+import Video from "../components/Video";
 import Service from "../components/Service";
 
 const Home = () => {
@@ -26,7 +26,9 @@ const Home = () => {
       <section id="mission">
         <Mission />
       </section>
-
+    <section id="video">
+        <Video />
+      </section>
       <section id="connect">
         <Connect />
       </section>
@@ -35,9 +37,7 @@ const Home = () => {
         <Updates />
       </section>
 
-      {/* <section id="video">
-        <Video />
-      </section> */}
+  
 
       <section id="service">
         <Service />
