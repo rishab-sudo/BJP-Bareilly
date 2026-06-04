@@ -4,7 +4,7 @@ import {
   FaInstagram,
   FaYoutube,
 } from "react-icons/fa";
-import { RiThreadsFill } from "react-icons/ri";
+
 import "./Connect.css";
 
 const Connect = () => {
