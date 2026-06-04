@@ -1,0 +1,149 @@
+/* =========================
+   STICKY NAVBAR
+========================= */
+
+.navbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  background: transparent !important;
+  z-index: 1000;
+  padding: 25px 0px;
+
+}
+
+/* NAVBAR CONTAINER */
+
+.navbar .container,
+.navbar .container-fluid {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  position: relative;
+}
+
+/* =========================
+   LOGO
+========================= */
+
+.navbar-logo {
+  cursor: pointer;
+  z-index: 2;
+}
+
+/* .navbar-logo img {
+  max-height: 45px;
+  width: auto;
+  display: block;
+} */
+
+/* =========================
+   FULL WIDTH BLACK OVERLAY
+========================= */
+
+.navbar-links {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 45px;
+ width: 100%;
+
+padding: 15px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* LINKS */
+
+.links {
+  text-decoration: none;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  position: relative;
+  transition: 0.3s ease;
+  white-space: nowrap;
+}
+
+.links:hover {
+  color: #f97316;
+}
+
+/* ACTIVE LINK */
+
+.links.active {
+  color: #f97316;
+}
+
+/* =========================
+   MOBILE MENU
+========================= */
+
+.navbar-menu {
+  display: none;
+  font-size: 30px;
+  cursor: pointer;
+  color: #fff;
+  z-index: 2;
+}
+
+/* =========================
+   SIDEBAR
+========================= */
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -280px;
+  width: 260px;
+  height: 100vh;
+  background: #111;
+
+  padding: 30px;
+  z-index: 1200;
+
+  transition: 0.4s ease;
+  box-shadow: 4px 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.sidebar.open {
+  left: 0;
+}
+
+.sidebar-logo {
+  margin-bottom: 35px;
+}
+
+.sidebar .links {
+  display: block;
+  margin-bottom: 22px;
+  font-size: 18px;
+  color: #fff;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 992px) {
+
+  .navbar-links {
+    display: none;
+  }
+
+  .navbar-menu {
+    display: block;
+  }
+
+  .navbar {
+    padding: 18px 20px;
+  }
+
+  .navbar-logo img {
+    max-height: 40px;
+  }
+}
