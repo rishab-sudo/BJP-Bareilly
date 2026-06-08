@@ -38,9 +38,16 @@ const Navbar = () => {
           className="d-flex justify-content-between  g-0 align-items-center"
         >
           {/* Logo */}
-          <div className="navbar-logo" onClick={() => scrollToSection("home")}>
-         
-          </div>
+    <div
+  className="navbar-logo"
+  onClick={() => scrollToSection("home")}
+>
+  <img
+  className="nav-logo"
+    src={require("../assets/Logo BJP.png")}
+    alt="BJP Logo"
+  />
+</div>
 
           {/* Desktop Links */}
           <div className="navbar-links">
@@ -73,7 +80,11 @@ const Navbar = () => {
       {/* Sidebar */}
       <div className={`sidebar ${menuOpen ? "open" : ""}`}>
         <div className="sidebar-logo">
-         
+                    <img
+  className="nav-logo"
+    src={require("../assets/Logo BJP.png")}
+    alt="BJP Logo"
+  />
         </div>
 
         <span className="links" onClick={() => scrollToSection("home")}>

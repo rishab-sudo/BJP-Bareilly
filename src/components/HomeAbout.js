@@ -15,7 +15,7 @@ const HomeAbout = () => {
             className="home-about-image"
           />
 
-          <div className="about-floating-box box-one">
+          {/* <div className="about-floating-box box-one">
             <h4>10+</h4>
             <p>Years Experience</p>
           </div>
@@ -23,7 +23,7 @@ const HomeAbout = () => {
           <div className="about-floating-box box-two">
             <h4>500+</h4>
             <p>Happy Clients</p>
-          </div>
+          </div> */}
         </div>
 
         {/* Right Content */}
@@ -47,10 +47,15 @@ const HomeAbout = () => {
           </p>
 
           <div className="about-btn">
-            <HoverButton
-              text="Contact Us"
-              onClick={() => alert("Button Clicked")}
-            />
+           <HoverButton
+  text="Contact Us"
+  onClick={() => {
+    document.getElementById("connect")?.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
+  }}
+/>
           </div>
 
         </div>

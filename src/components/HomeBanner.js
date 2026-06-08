@@ -45,7 +45,7 @@ const HomeBanner = () => {
             </div>
 
             {/* Content Layout */}
-            <div className="homebanner-container">
+            <div className="homebanner-container container">
 
               {/* Left Side */}
               <div className="homebanner-left">
@@ -53,7 +53,7 @@ const HomeBanner = () => {
               </div>
 
               {/* Right Side — Text vertically centered */}
-              <div className="homebanner-right">
+              <div className="homebanner-right ">
                 <div className="carousel-content">
                   <h2 className="homebanner-heading">{item.heading}</h2>
                   <p className="homebanner-para">{item.para}</p>

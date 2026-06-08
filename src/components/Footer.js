@@ -12,11 +12,11 @@ const Footer = () => {
             {/* Column 1 */}
             <Col className="footer-col" lg={4} md={6}>
               <div className="footer-inner">
-                {/* <img
-                  src=""
-                  alt="logo"
-                  className="footer-logo"
-                /> */}
+           <img
+  className="nav-logo"
+    src={require("../assets/Logo BJP.png")}
+    alt="BJP Logo"
+  />
 
                 <p className="footer-tagline">सादगी, सेवा भावना और जनता के प्रति समर्पण के साथ लोगों के बीच निरंतर सक्रिय एक प्रेरणादायी एवं दूरदर्शी व्यक्तित्व, जो जनकल्याण, सामाजिक विकास और क्षेत्र की प्रगति हेतु निरंतर कार्यरत है।</p>
 
@@ -48,7 +48,7 @@ const Footer = () => {
             </Col>
 
             {/* Column 2 */}
-            <Col className="footer-col" lg={4} md={6}>
+            <Col className="footer-col footer-col-right" lg={4} md={6}>
               <div className="footer-inner">
                 <h5 className="footer-heading">Quick Links</h5>
 
@@ -63,7 +63,7 @@ const Footer = () => {
             </Col>
 
             {/* Column 3 */}
-            <Col className="footer-col" lg={4} md={12}>
+            <Col className="footer-col footer-col-right" lg={4} md={12}>
               <div className="footer-inner">
                 <h5 className="footer-heading">Address</h5>
 

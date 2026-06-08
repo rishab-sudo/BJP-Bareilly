@@ -77,16 +77,17 @@ height: 70px;
 /* Mobile */
 @media (max-width: 576px) {
   .banner-bottom {
-    margin-top: -40px;
+    margin-top: 36px;
   }
 
   .banner-bottom-overlay {
-    padding: 20px 0;
+    padding:  0;
   }
 
   .banner-bottom-box {
     border-radius: 14px;
-    padding: 25px 15px;
+    padding: 25px 5px;
+
   }
 
   .banner-bottom-icon {
