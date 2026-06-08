@@ -4,7 +4,7 @@ import "./HomeBanner.css";
 
 import bg1 from "../assets/bjp-b11.png";
 import bg2 from "../assets/bjp-b2.png";
-import bg3 from "../assets/3 (2).png";
+import bg3 from "../assets/bjp-b11.png";
 
 const bannerContent = [
   {
@@ -29,37 +29,33 @@ const HomeBanner = () => {
     <section className="homebanner">
       <Carousel
         controls={false}
-        indicators={true}
-        interval={4000}
+        indicators
+        interval={5000}
         pause={false}
-        fade={false}
+        fade
         className="homebanner-carousel"
       >
         {bannerContent.map((item, index) => (
           <Carousel.Item key={index}>
+            <div className="banner-slide">
+              {/* Background image as an actual <img> for proper mobile fit */}
+              <img
+                src={item.bg}
+                alt=""
+                className="banner-bg-img"
+                aria-hidden="true"
+              />
 
-            {/* Background Image per slide */}
-            <div className="homebanner-bg">
-              <img src={item.bg} alt="" className="homebanner-bg-img" />
-              <div className="homebanner-overlay" />
-            </div>
+              <div className="banner-overlay"></div>
 
-            {/* Content Layout */}
-            <div className="homebanner-container container">
+              <div className="container banner-content-wrapper">
+                <div className="banner-empty"></div>
 
-              {/* Left Side */}
-              <div className="homebanner-left">
-                {/* नेता की photo या logo यहाँ */}
-              </div>
-
-              {/* Right Side — Text vertically centered */}
-              <div className="homebanner-right ">
-                <div className="carousel-content">
-                  <h2 className="homebanner-heading">{item.heading}</h2>
-                  <p className="homebanner-para">{item.para}</p>
+                <div className="banner-content">
+                  <h1>{item.heading}</h1>
+                  <p>{item.para}</p>
                 </div>
               </div>
-
             </div>
           </Carousel.Item>
         ))}

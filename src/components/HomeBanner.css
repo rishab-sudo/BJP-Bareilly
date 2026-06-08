@@ -1,175 +1,246 @@
-/* ===== HOMEBANNER ===== */
+/* ==========================
+   HOME BANNER
+========================== */
+
 .homebanner {
-  position: relative;
   width: 100%;
-  height: 100vh;
-  min-height: 550px;
   overflow: hidden;
 }
 
-/* Bootstrap Carousel full height */
+/* Desktop: full viewport height */
 .homebanner-carousel,
 .homebanner-carousel .carousel-inner,
 .homebanner-carousel .carousel-item {
-  height: 100%;
+  height: 100vh;
+  min-height: 650px;
 }
 
-/* --- Background Images --- */
-.homebanner-bg {
+/* ==========================
+   SLIDE
+========================== */
+
+.banner-slide {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  min-height: 650px;
+}
+
+/* ==========================
+   BACKGROUND IMAGE
+========================== */
+
+.banner-bg-img {
   position: absolute;
   inset: 0;
-}
-
-.homebanner-bg-img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center;
+  object-position: center center;
+  display: block;
+  z-index: 0;
 }
 
-.homebanner-overlay {
+/* ==========================
+   OVERLAY
+========================== */
+
+.banner-overlay {
   position: absolute;
   inset: 0;
   background: linear-gradient(
-    to right,
-    rgba(0, 0, 0, 0.25) 0%,
-    rgba(0, 0, 0, 0.55) 50%,
-    rgba(0, 0, 0, 0.70) 100%
+    90deg,
+    rgba(0, 0, 0, 0.2) 0%,
+    rgba(0, 0, 0, 0.45) 45%,
+    rgba(0, 0, 0, 0.75) 100%
   );
+  z-index: 1;
 }
 
-/* --- Main Container --- */
-.homebanner-container {
+/* ==========================
+   CONTENT WRAPPER
+========================== */
+
+.banner-content-wrapper {
   position: relative;
   z-index: 2;
-
   height: 100%;
-
-  margin: 0 auto;
-  padding: 0 2rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 2rem;
 }
 
-/* --- Left Side --- */
-.homebanner-left {
+.banner-empty {
   flex: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
-/* --- Right Side — vertically centered --- */
-.homebanner-right {
+.banner-content {
   flex: 1;
+  max-width: 650px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-start;
-text-align: justify;
-  max-width: 75% !important;
-  
 }
 
-.carousel-content {
-  width: 100%;
-}
+/* ==========================
+   HEADING
+========================== */
 
-/* --- Heading --- */
-.homebanner-heading {
-  font-size: clamp(1.5rem, 3vw, 2.4rem);
+.banner-content h1 {
+  color: #fff;
+  font-size: clamp(2rem, 4vw, 3.5rem);
   font-weight: 700;
-  color: #ffffff;
-  margin: 0 0 1.2rem;
-  line-height: 1.3;
-  text-shadow: 1px 2px 8px rgba(0, 0, 0, 0.4);
+  line-height: 1.2;
+  margin-bottom: 20px;
+  text-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
 }
 
-/* --- Paragraph --- */
-.homebanner-para {
-  font-size: clamp(0.9rem, 1.4vw, 1.05rem);
-  color: rgba(255, 255, 255, 0.88);
-  line-height: 1.85;
+/* ==========================
+   PARAGRAPH
+========================== */
+
+.banner-content p {
+  color: rgba(255, 255, 255, 0.95);
+  font-size: clamp(0.95rem, 1.3vw, 1.15rem);
+  line-height: 1.9;
   margin: 0;
-  text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.35);
+  text-shadow: 0 3px 10px rgba(0, 0, 0, 0.35);
 }
 
-/* --- Bootstrap Indicators Override --- */
+/* ==========================
+   INDICATORS
+========================== */
+
 .homebanner-carousel .carousel-indicators {
-  justify-content: flex-start;
-  padding-left: calc(50% + 2rem); /* right side ke saath align */
-  margin-bottom: 2rem;
-  z-index: 3;
+  bottom: 20px;
+  z-index: 5;
 }
 
 .homebanner-carousel .carousel-indicators [data-bs-target] {
-  width: 10px;
-  height: 10px;
+  width: 12px;
+  height: 12px;
   border-radius: 50%;
-  background-color: rgba(255, 255, 255, 0.45);
   border: none;
+  background: rgba(255, 255, 255, 0.5);
   opacity: 1;
-  transition: background 0.3s ease, transform 0.3s ease;
 }
 
 .homebanner-carousel .carousel-indicators .active {
-  background-color: #ffffff;
-  transform: scale(1.3);
+  background: #fff;
 }
 
-/* ===== RESPONSIVE ===== */
-/* Mobile responsive */
+/* ==========================
+   TABLET  (≤ 991px)
+========================== */
+
 @media (max-width: 991px) {
-  .homebanner {
+  .homebanner-carousel,
+  .homebanner-carousel .carousel-inner,
+  .homebanner-carousel .carousel-item,
+  .banner-slide {
     height: auto;
-    min-height: 100vh;
+    min-height: 520px;
   }
 
-  .homebanner-carousel .carousel-item {
-    min-height: 100vh;
+  .banner-bg-img {
+    position: absolute;
+    height: 100%;
   }
 
-  .homebanner-container {
-    flex-direction: column;
-    padding: 5rem 1.5rem 4rem;
+  .banner-content-wrapper {
+    justify-content: center;
     text-align: center;
+    padding-top: 80px;
+    padding-bottom: 60px;
+    min-height: 520px;
     height: auto;
-    min-height: 100vh;
   }
 
-  .homebanner-left { order: 1; }
-
-  .homebanner-right {
-    order: 2;
-    align-items: center;        /* text center */
-    text-align: center;
+  .banner-empty {
+    display: none;
   }
 
-  .homebanner-overlay {
+  .banner-content {
+    max-width: 100%;
+    padding: 0 20px;
+    align-items: center;
+  }
+
+  .banner-overlay {
     background: rgba(0, 0, 0, 0.55);
+  }
+}
+
+/* ==========================
+   MOBILE  (≤ 576px)
+========================== */
+
+@media (max-width: 576px) {
+  /* Height grows with content */
+  .homebanner-carousel,
+  .homebanner-carousel .carousel-inner,
+  .homebanner-carousel .carousel-item,
+  .banner-slide {
+    height: auto !important;
+    min-height: unset;
+  }
+
+  /* Image: natural size, centered */
+  .banner-bg-img {
+    position: absolute; /* stays behind content */
+    inset: 0;
+    width: 100%;
+    height: 100%;       /* covers the full slide area (which is now content-sized) */
+    object-fit: cover;
+    object-position: center center;
+    z-index: 0;
+  }
+
+  .banner-overlay {
+    background: rgba(0, 0, 0, 0.55);
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+  }
+
+  /* KEY FIX:
+     position: relative → back in normal flow
+     padding-top pushes content down (navbar clearance)
+     slide height = padding-top + text + padding-bottom  */
+  .banner-content-wrapper {
+    position: relative;
+    inset: unset;
+    height: auto;
+    padding-top: 120px;    /* ← increase this value as needed */
+    padding-bottom: 70px;
+    min-height: unset;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+  }
+
+  .banner-empty {
+    display: none;
+  }
+
+  .banner-content {
+    padding: 0 16px;
+    align-items: center;
+    text-align: center;
+    max-width: 100%;
+  }
+
+  .banner-content h1 {
+    font-size: 1.55rem;
+    margin-bottom: 12px;
+  }
+
+  .banner-content p {
+    font-size: 0.9rem;
+    line-height: 1.7;
   }
 
   .homebanner-carousel .carousel-indicators {
-    justify-content: center;
-    padding-left: 0;
-  }
-
-  /* ✅ Background image mobile center */
-  .homebanner-bg-img {
-    object-position: center center;
-  }
-}
-
-@media (max-width: 576px) {
-  .homebanner-heading {
-    font-size: 1.4rem;
-    text-align: center;        /* ✅ heading center */
-  }
-
-  .homebanner-para {
-    font-size: 0.9rem;
-    text-align: center;        /* ✅ para center */
+    bottom: 10px;
   }
 }
